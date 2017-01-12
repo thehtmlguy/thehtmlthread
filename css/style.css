@@ -1,0 +1,276 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+::selection {
+  background: #333;
+  color: #FFF;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eee;
+  border: thin solid lightgray;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1) inset;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #999;
+  border: thin solid gray;
+}
+
+/* ----------------
+  Header & Footer
+---------------- */
+header.band {
+  background: #252525;
+  color: white;
+  text-align: center;
+  padding: 5% 0 5% 0;
+}
+
+header.band h1 {
+  font-size: 1.25em;
+  line-height: 1em;
+  margin-bottom: 1em;
+}
+
+footer.band {
+  background: #252525;
+  color: white;
+  text-align: center;
+  padding: 1% 0 1% 0;
+  clear: both;
+}
+
+footer.band h1 {
+  font-weight: 300;
+  font-size: .75em;
+  line-height: 1.25em;
+  margin-bottom: 1em;
+}
+
+.title {
+  font-size: 5em;
+}
+
+/* ----------------
+       Body 
+----------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0;
+  margin: 0;
+}
+
+/* ----------------
+    Navigation
+----------------*/
+nav ul {
+  list-style: none;
+  padding: 0px;
+  text-align: center;
+}
+nav ul li {
+  display: inline;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+}
+nav ul li:hover {
+  color: #4fc6e0;
+}
+
+.bar {
+  background-color: rgba(1, 1, 1, 0.9);
+  color: rgba(225, 225, 225, 0.9);
+  padding: 1px;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+}
+
+/* ----------------
+      Container
+---------------- */
+.container {
+  width: 960px;
+  margin: 10px auto;
+  -webkit-transform: translateZ(0);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* ----------------
+      Sections
+---------------- */
+p {
+  text-align: center;
+}
+
+/* ----------------
+      Images
+---------------- */
+.work {
+  margin: 20px 0;
+}
+.work figure {
+  float: left;
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+  background: #4fc6e0;
+  line-height: 200px;
+  -webkit-filter: sepia(0.5);
+  position: relative;
+  padding: 0 !important;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  transition: 0.6s;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -o-transition: 0.6s;
+  -ms-transition: 0.6s;
+}
+.work figure a img {
+  height: 100%;
+  width: 100%;
+}
+.work figure dl {
+  opacity: .2;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  padding: 20px;
+  margin: 0;
+  line-height: 2.5;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-family: 'Open Sans';
+  transition: 0.6s;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -o-transition: 0.6s;
+  -ms-transition: 0.6s;
+}
+.work figure dl dt {
+  font-size: 12px;
+  margin-bottom: -16px;
+}
+.work figure dl dd {
+  margin-left: 0;
+}
+.work figure:hover dl {
+  opacity: 0;
+}
+
+/* ----------------
+      Filter
+---------------- */
+.current-li {
+  color: #000;
+}
+
+.current {
+  -webkit-filter: sepia(10) !important;
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale 1.05;
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+}
+
+.not-current {
+  transform: scale(0.75);
+  -webkit-transform: scale(0.75);
+  -moz-transform: scale 0.75;
+  -o-transform: scale(0.75);
+  -ms-transform: scale(0.75);
+  -webkit-filter: grayscale(1) !important;
+}
+
+.not-current:hover dl {
+  opacity: 0 !important;
+}
+
+/* ----------------
+    Media Queries
+---------------- */
+/* Media Queries */
+@media only screen and (max-width: 965px) {
+  .container {
+    width: 840px;
+  }
+
+  .work figure {
+    width: 170px;
+    height: 170px;
+  }
+}
+@media only screen and (max-width: 860px) {
+  .container {
+    width: 720px;
+  }
+
+  .work figure {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 740px) {
+  .container {
+    width: 600px;
+  }
+
+  .work figure {
+    width: 160px;
+    height: 160px;
+  }
+
+  .not-current {
+    opacity: 0.5;
+  }
+}
+@media only screen and (max-width: 610px) {
+  .container {
+    width: 460px;
+  }
+
+  header {
+    font-size: 400%;
+  }
+
+  .work figure {
+    margin-left: 40px;
+    margin-bottom: 60px;
+  }
+
+  .work figure dl {
+    /*height: 40px;
+    top: 200px;*/
+    bottom: 0px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 320px;
+  }
+
+  .work figure {
+    width: 200px;
+    height: 200px;
+    margin: 20px 60px;
+  }
+}
